@@ -1,0 +1,10 @@
+@media all and (min-width: 480px) {
+  .Slides {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+  }
+}
+.Slides {
+    padding: 60px 0;
+}

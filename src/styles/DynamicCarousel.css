@@ -1,0 +1,8 @@
+.carouselSection {
+padding: 60px 0;
+}
+.item {
+    background: #333;
+    text-align: center;
+    height: 300px;
+}
