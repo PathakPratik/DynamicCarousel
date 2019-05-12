@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6c39c440bab6c86bae05524996966804",
+    "revision": "ab36885145c12489a80284ef89e826d9",
     "url": "/DynamicCarousel/index.html"
   },
   {
-    "revision": "0a9a047c67f1260efd20",
+    "revision": "63e4d20435c28682cd32",
     "url": "/DynamicCarousel/static/css/main.c3c453ce.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DynamicCarousel/static/js/2.efdcfd8c.chunk.js"
   },
   {
-    "revision": "0a9a047c67f1260efd20",
-    "url": "/DynamicCarousel/static/js/main.163a92e0.chunk.js"
+    "revision": "63e4d20435c28682cd32",
+    "url": "/DynamicCarousel/static/js/main.86702184.chunk.js"
   },
   {
     "revision": "3ec2eff2c7f5aa9aa239",
