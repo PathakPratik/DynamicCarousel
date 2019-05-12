@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DynamicCarousel/static/css/main.c3c453ce.chunk.css",
+    "main.js": "/DynamicCarousel/static/js/main.163a92e0.chunk.js",
+    "main.js.map": "/DynamicCarousel/static/js/main.163a92e0.chunk.js.map",
+    "runtime~main.js": "/DynamicCarousel/static/js/runtime~main.b08df813.js",
+    "runtime~main.js.map": "/DynamicCarousel/static/js/runtime~main.b08df813.js.map",
+    "static/js/2.efdcfd8c.chunk.js": "/DynamicCarousel/static/js/2.efdcfd8c.chunk.js",
+    "static/js/2.efdcfd8c.chunk.js.map": "/DynamicCarousel/static/js/2.efdcfd8c.chunk.js.map",
+    "index.html": "/DynamicCarousel/index.html",
+    "precache-manifest.a2419c967ff29bc30700a0873885f8be.js": "/DynamicCarousel/precache-manifest.a2419c967ff29bc30700a0873885f8be.js",
+    "service-worker.js": "/DynamicCarousel/service-worker.js",
+    "static/css/main.c3c453ce.chunk.css.map": "/DynamicCarousel/static/css/main.c3c453ce.chunk.css.map"
+  }
+}
