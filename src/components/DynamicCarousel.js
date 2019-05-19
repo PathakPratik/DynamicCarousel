@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import { Carousel } from "react-bootstrap";
+import { connect } from 'react-redux';
+import withLocalState from './withLocalState';
 import "../styles/DynamicCarousel.css";
 
-export default class DynamicCarousel extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-    };
-  }
+class DynamicCarousel extends Component {
 
   getSlides(num) {
 
@@ -30,15 +26,39 @@ export default class DynamicCarousel extends Component {
       return arr;
   }
 
+  deleteLocalState(){
+    this.props.removeFromLocal('currentSelection');
+    this.props.removeFromLocal('userSelections');
+    alert("Deleted Saved State Successfully!")
+    window.location.reload();
+  }
+
   render() {
+
     return (
     <div className="carouselSection">
     { ( this.props.currentSelection == 0 ? false : true ) &&
-        <Carousel>
-            {this.getSlides(this.props.currentSelection)}
-        </Carousel>
+        <div>
+            <Carousel>
+                {this.getSlides(this.props.currentSelection)}
+            </Carousel>
+            <div className="deleteStateBtn">
+            <span onClick={this.deleteLocalState.bind(this)}>{this.props.children}</span>
+            </div>
+        </div>
     }
     </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    currentSelection: state.slideSelectionDetails.currentSelection,
+    initialLoad: state.slideSelectionDetails.initialLoad
+  };
+}
+
+const DynamicCarouselWithLocalState = withLocalState(DynamicCarousel);
+
+export default connect(mapStateToProps)(DynamicCarouselWithLocalState);

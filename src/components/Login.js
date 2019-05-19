@@ -1,38 +1,36 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { connect } from 'react-redux';
+import { setUsername, setPassword } from '../actions/loginActions.js';
 import "../styles/Login.css";
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      username: "",
-      password: ""
-    };
-
-    this.handleChange = this.handleChange.bind(this);
+    this.handleUsernameChange = this.handleUsernameChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   validateForm() {
-    return this.state.username.length > 0 && this.state.password.length > 0;
+    return this.props.username.length > 0 && this.props.password.length > 0;
   }
 
-  handleChange(event){
-    this.setState({
-      [event.target.name]: event.target.value
-    });
+  handleUsernameChange(event){
+    this.props.setUsername( event.target.value );
+  }
+
+  handlePasswordChange(event){
+    this.props.setPassword( event.target.value );
   }
 
   handleSubmit(event){
     event.preventDefault();
 
-    if( this.state.username === "shaadi" && this.state.password === "123" )
+    if( this.props.username === "shaadi" && this.props.password === "123" )
         this.props.history.push('/slides');
     else
         alert("Incorrect UserName/Password. Please try again.");
-
   }
 
   render() {
@@ -46,8 +44,8 @@ export default class Login extends Component {
               <FormControl
                 name="username"
                 type="text"
-                value={this.state.username}
-                onChange={this.handleChange} />
+                value={this.props.username}
+                onChange={this.handleUsernameChange} />
             </FormGroup>
             <br />
             <FormGroup>
@@ -55,8 +53,8 @@ export default class Login extends Component {
               <FormControl
                 name="password"
                 type="password"
-                value={this.state.password}
-                onChange={this.handleChange} />
+                value={this.props.password}
+                onChange={this.handlePasswordChange} />
             </FormGroup>
             <br />
             <FormGroup>
@@ -75,3 +73,17 @@ export default class Login extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    username: state.loginDetails.username,
+    password: state.loginDetails.password
+  };
+}
+
+const mapDispatchToProps = {
+  setUsername,
+  setPassword
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

@@ -1,52 +1,43 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import { connect } from 'react-redux';
 import "../styles/UserSelectionsModal.css";
 
-export default class UserSelectionsModal extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+const UserSelectionsModal = (props) => {
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    const [showModal, showModalStatus] = useState(false);
 
-    this.state = {
-      show: false
-    };
-  }
-
-  handleClose() {
-    this.setState({ show: false });
-  }
-
-  handleShow() {
-    this.setState({ show: true });
-  }
-
-  render() {
     return (
       <div>
-       { this.props.showFinishBtn &&
-        <Button variant="primary" className="finishButton" bsSize="lg" onClick={this.handleShow}>
-          <b>Finish</b>
+      { props.currentSelection != 0 &&
+        <Button variant="primary" onClick={ () => showModalStatus(true) } className="finishButton" bsSize="lg">
+          <b>Show User Selections</b>
         </Button>
-       }
-
-        <Modal show={this.state.show} onHide={this.handleClose}>
+      }
+        <Modal show={showModal} onHide={ () => showModalStatus(false) }>
           <Modal.Header closeButton>
             <Modal.Title>User Selections</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             Following are all the numbers that user selected while using the App:
             <br></br>
-            {this.props.allUserSelections.join(',')}
+            {props.userSelections.join(',')}
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
+            <Button variant="secondary" onClick={ () => showModalStatus(false) }>
               Close
             </Button>
           </Modal.Footer>
         </Modal>
       </div>
     );
-  }
 }
+
+function mapStateToProps(state) {
+  return {
+    userSelections: state.slideSelectionDetails.userSelections,
+    currentSelection: state.slideSelectionDetails.currentSelection
+  };
+}
+
+export default connect(mapStateToProps)(UserSelectionsModal);

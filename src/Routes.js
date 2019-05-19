@@ -6,5 +6,5 @@ import Slides from "./components/Slides";
 export default () =>
   <Switch>
     <Route path="/" exact component={Login} />
-    <Route path="/slides" exact component={Slides} />
+    <Route path="/slides" component={Slides} />
   </Switch>;

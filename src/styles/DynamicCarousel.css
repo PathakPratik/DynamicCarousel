@@ -6,3 +6,8 @@ padding: 60px 0;
     text-align: center;
     height: 300px;
 }
+.deleteStateBtn{
+    position: absolute;
+    top: 20px;
+    right: 130px;
+}
