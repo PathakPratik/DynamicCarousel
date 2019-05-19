@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/DynamicCarousel/static/css/main.36174d79.chunk.css",
-    "main.js": "/DynamicCarousel/static/js/main.25c50b70.chunk.js",
-    "main.js.map": "/DynamicCarousel/static/js/main.25c50b70.chunk.js.map",
+    "main.js": "/DynamicCarousel/static/js/main.e43f1e3e.chunk.js",
+    "main.js.map": "/DynamicCarousel/static/js/main.e43f1e3e.chunk.js.map",
     "runtime~main.js": "/DynamicCarousel/static/js/runtime~main.b08df813.js",
     "runtime~main.js.map": "/DynamicCarousel/static/js/runtime~main.b08df813.js.map",
-    "static/js/2.7f2c3c7e.chunk.js": "/DynamicCarousel/static/js/2.7f2c3c7e.chunk.js",
-    "static/js/2.7f2c3c7e.chunk.js.map": "/DynamicCarousel/static/js/2.7f2c3c7e.chunk.js.map",
+    "static/js/2.2c37ba04.chunk.js": "/DynamicCarousel/static/js/2.2c37ba04.chunk.js",
+    "static/js/2.2c37ba04.chunk.js.map": "/DynamicCarousel/static/js/2.2c37ba04.chunk.js.map",
     "index.html": "/DynamicCarousel/index.html",
-    "precache-manifest.b7634a183403a25a8b80bd3071965b68.js": "/DynamicCarousel/precache-manifest.b7634a183403a25a8b80bd3071965b68.js",
+    "precache-manifest.85af798b078132b0d126abd511f4a59f.js": "/DynamicCarousel/precache-manifest.85af798b078132b0d126abd511f4a59f.js",
     "service-worker.js": "/DynamicCarousel/service-worker.js",
     "static/css/main.36174d79.chunk.css.map": "/DynamicCarousel/static/css/main.36174d79.chunk.css.map"
   }
